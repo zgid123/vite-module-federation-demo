@@ -1,8 +1,8 @@
 import { resolve } from 'path';
 import { readdirSync } from 'fs';
 import detect from 'detect-port';
+import react from '@vitejs/plugin-react';
 import { defineConfig, UserConfigExport } from 'vite';
-import reactRefresh from '@vitejs/plugin-react-refresh';
 import federation from '@originjs/vite-plugin-federation';
 
 import pkg from './package.json';
@@ -14,11 +14,13 @@ export default async function config(): Promise<UserConfigExport> {
 
   return defineConfig({
     server: {
-      host: '127.0.0.1',
       port,
+      watch: {
+        usePolling: true,
+      },
     },
     plugins: [
-      reactRefresh(),
+      react(),
       federation({
         name: 'monoApp',
         filename: 'remoteEntry.js',
@@ -40,14 +42,14 @@ export default async function config(): Promise<UserConfigExport> {
             import: false,
             requiredVersion: pkg.dependencies['react-router-dom'],
           },
-          '@chakra-ui/react': '*',
-          // '@emotion/react': '*',
-          // '@emotion/styled': '*',
-          // 'framer-motion': '*',
+          '@chakra-ui/react': {
+            eager: true,
+            import: false,
+            requiredVersion: pkg.dependencies['@chakra-ui/react'],
+          },
         },
       }),
     ],
-    cacheDir: 'node_modules/.cacheDir',
     resolve: {
       alias: items.map((item) => {
         if (/\.(t|j)sx?$/.test(item)) {

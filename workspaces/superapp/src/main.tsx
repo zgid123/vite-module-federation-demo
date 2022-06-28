@@ -1,13 +1,21 @@
 import * as React from 'react';
 
-import { render } from 'react-dom';
 import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react';
 
 import App from 'App';
 
-render(
+const container = document.getElementById('root');
+
+if (!container) {
+  throw 'Cannot find the root element';
+}
+
+const root = createRoot(container);
+
+root.render(
   <StrictMode>
     <ChakraProvider>
       <BrowserRouter>
@@ -15,5 +23,4 @@ render(
       </BrowserRouter>
     </ChakraProvider>
   </StrictMode>,
-  document.getElementById('root'),
 );

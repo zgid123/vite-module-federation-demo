@@ -10,16 +10,16 @@
   "scripts": {},
   "dependencies": {},
   "devDependencies": {
-    "@types/detect-port": "^1.3.0",
-    "@typescript-eslint/eslint-plugin": "^4.26.0",
-    "@typescript-eslint/parser": "^4.26.0",
+    "@types/detect-port": "^1.3.2",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
     "detect-port": "^1.3.0",
-    "eslint": "^7.24.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "husky": "^7.0.0",
-    "lint-staged": "^10.5.4",
-    "prettier": "^2.3.1",
-    "typescript": "^4.2.4"
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.1.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
   }
 }
