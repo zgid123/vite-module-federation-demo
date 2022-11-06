@@ -6,7 +6,7 @@
   ],
   "extends": [
     "../../.eslintrc.json",
-    "react-app"
+    "../../infrastructures/eslint/.eslintrc.react.json"
   ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",

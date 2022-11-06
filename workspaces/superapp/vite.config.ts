@@ -27,24 +27,16 @@ export default async function config(): Promise<UserConfigExport> {
         },
         shared: {
           react: {
-            eager: true,
-            singleton: true,
-            requiredVersion: pkg.dependencies.react,
+            version: pkg.dependencies.react,
           },
           'react-dom': {
-            eager: true,
-            singleton: true,
-            requiredVersion: pkg.dependencies['react-dom'],
+            version: pkg.dependencies['react-dom'],
           },
           'react-router-dom': {
-            eager: true,
-            singleton: true,
-            requiredVersion: pkg.dependencies['react-router-dom'],
+            version: pkg.dependencies['react-router-dom'],
           },
           '@chakra-ui/react': {
-            eager: true,
-            singleton: true,
-            requiredVersion: pkg.dependencies['@chakra-ui/react'],
+            version: pkg.dependencies['@chakra-ui/react'],
           },
         },
       }),

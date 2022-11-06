@@ -5,8 +5,6 @@ import react from '@vitejs/plugin-react';
 import { defineConfig, UserConfigExport } from 'vite';
 import federation from '@originjs/vite-plugin-federation';
 
-import pkg from './package.json';
-
 export default async function config(): Promise<UserConfigExport> {
   const port = await detect(8000);
 
@@ -27,27 +25,13 @@ export default async function config(): Promise<UserConfigExport> {
         exposes: {
           './App': './src/App',
         },
-        shared: {
-          react: {
-            eager: true,
-            requiredVersion: pkg.dependencies.react,
-          },
-          'react-dom': {
-            eager: true,
-            import: false,
-            requiredVersion: pkg.dependencies['react-dom'],
-          },
-          'react-router-dom': {
-            eager: true,
-            import: false,
-            requiredVersion: pkg.dependencies['react-router-dom'],
-          },
-          '@chakra-ui/react': {
-            eager: true,
-            import: false,
-            requiredVersion: pkg.dependencies['@chakra-ui/react'],
-          },
-        },
+        shared: [
+          'react',
+          'react-dom',
+          'react-router-dom',
+          '@chakra-ui/react',
+          'react-viewport-list',
+        ],
       }),
     ],
     resolve: {
