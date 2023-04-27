@@ -1,0 +1,36 @@
+{
+  "name": "@libs/rc-components",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.18",
+    "@chakra-ui/react": "^2.5.5",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@tanstack/react-table": "^8.8.5",
+    "framer-motion": "^10.11.2",
+    "lodash.debounce": "^4.0.8",
+    "lodash.get": "^4.4.2",
+    "lodash.throttle": "^4.1.1",
+    "ramda": "^0.29.0",
+    "react": "^18.1.0",
+    "react-hook-form": "^7.43.9",
+    "react-router-dom": "^6.10.0",
+    "react-select": "^5.7.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.192",
+    "@types/lodash.debounce": "^4.0.7",
+    "@types/lodash.get": "^4.4.7",
+    "@types/lodash.throttle": "^4.1.7",
+    "@types/ramda": "^0.28.23",
+    "@types/react": "^18.0.33",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.5.0"
+  }
+}

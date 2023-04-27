@@ -15,6 +15,9 @@
     "importHelpers": true,
     "removeComments": true
   },
+  "include": [
+    "**/microfrontend-app.d.ts"
+  ],
   "exclude": [
     "**/node_modules/*",
     "**/dist/*",

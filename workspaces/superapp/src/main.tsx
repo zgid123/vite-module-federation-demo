@@ -1,9 +1,10 @@
+/* eslint-disable no-throw-literal */
 import * as React from 'react';
 
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider } from '@libs/rc-components';
 
 import App from 'App';
 
